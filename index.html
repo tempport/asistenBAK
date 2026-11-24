@@ -1,15 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="id">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Asisten managment BAK</title>
+  <title>Asisten Management BAK</title>
   <style>
-    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; }
-    iframe { width: 100%; height: 100%; border: none; }
+    body, html { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #0f172a; }
+    iframe { width: 100%; height: 100%; border: none; display: block; }
   </style>
 </head>
 <body>
-  <iframe src=https://script.google.com/macros/s/AKfycbybGosviGD-4w8T_16Ga8RkRTHxvH3yToMGWz9OcrLWoIjU-bNJB1Sq9k2e-gHZALHl9g/exec></iframe>
+  <iframe id="appFrame" allow="clipboard-read; clipboard-write"></iframe>
+  <script>
+    // Ganti URL di bawah ini jika Anda membuat deployment Web App baru
+    const WEB_APP_EXEC_URL = "https://script.google.com/macros/s/AKfycbybGosviGD-4w8T_16Ga8RkRTHxvH3yToMGwz9OCrLWoIjU-bNJB1Sq9k2e-gHZALH19g/exec";
+    // Teruskan parameter query (?q=...) dari Google Chat ke dalam iframe Web App
+    document.getElementById("appFrame").src = WEB_APP_EXEC_URL + window.location.search;
+  </script>
 </body>
 </html>
